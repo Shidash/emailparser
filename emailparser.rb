@@ -17,7 +17,7 @@ class Parse
         end
         if line.include?("To") && to != 1
           to = 1
-          Clean.toclean(line)
+          toclean(line)
         end
 
         if line.include?("From") && from !=1
@@ -53,11 +53,9 @@ class Parse
     end
   end
 
-  process(getfile)
-end
-
-class Clean
   def self.toclean(to)
     puts to
   end
+
+  process(getfile)
 end
