@@ -22,7 +22,7 @@ class Parse
 
         if line.include?("From") && from !=1
           from = 1
-          puts line
+          fromclean(line)
         end
 
         if line.include?("Date") && date != 1
@@ -55,6 +55,10 @@ class Parse
 
   def self.toclean(to)
     puts to
+  end
+
+  def self.fromclean(from)
+    puts from
   end
 
   process(getfile)
