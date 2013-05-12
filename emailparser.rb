@@ -27,7 +27,7 @@ class Parse
 
         if line.include?("Date") && date != 1
           date = 1
-          puts line
+          dateclean(line)
         end
 
         if line.include?("MessageId") && messageid !=1
@@ -59,6 +59,10 @@ class Parse
 
   def self.fromclean(from)
     puts from
+  end
+
+  def self.dateclean(date)
+    puts date
   end
 
   process(getfile)
