@@ -37,7 +37,7 @@ class Parse
 
         if line.include?("Cc") && cc !=1
           cc = 1
-          puts line
+          ccclean(line)
         end
 
         if line.include?("Bcc") && bcc !=1
@@ -67,6 +67,10 @@ class Parse
 
   def self.messageidclean(messageid)
     puts messageid
+  end
+
+  def self.ccclean(cc)
+    puts cc
   end
 
   process(getfile)
