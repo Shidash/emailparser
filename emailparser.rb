@@ -42,7 +42,7 @@ class Parse
 
         if line.include?("Bcc") && bcc !=1
           messageid = 1
-          puts line
+          bcccelan(line)
         end
 
         if line.include?("InReplyTo") && inreplyto !=1
@@ -71,6 +71,10 @@ class Parse
 
   def self.ccclean(cc)
     puts cc
+  end
+
+  def self.bccclean(bcc)
+    puts bcc
   end
 
   process(getfile)
